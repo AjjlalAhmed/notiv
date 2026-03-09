@@ -2,6 +2,8 @@
 
 Physics-based toast notification library for Vue 3 and Nuxt 3, with smooth SVG morphing pill animations.
 
+**[Documentation & Playground →](https://ajjlalahmed.github.io/notiv/)**
+
 ## Installation
 
 ```bash
