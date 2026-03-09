@@ -38,3 +38,5 @@ jobs:
           publish_dir: docs/dist
           # Keeps a clean deploy — no history bloat
           force_orphan: true
+          # Prevent GitHub from running Jekyll on our Vite output
+          enable_jekyll: false
