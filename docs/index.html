@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>notiv — Physics-based toast notifications for Vue 3</title>
+    <meta name="description" content="Silky-smooth pill animations powered by spring physics. Zero dependencies. Vue 3 & Nuxt 3." />
+    <meta name="og:title" content="notiv — Physics-based toast notifications for Vue 3" />
+    <meta name="og:description" content="Silky-smooth pill animations powered by spring physics. Zero dependencies. Vue 3 & Nuxt 3." />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="notiv" />
+    <meta name="twitter:description" content="Physics-based toast notifications for Vue 3 & Nuxt 3." />
+    <!--
+      Apply CSS vars before Vue hydrates to avoid flash of wrong theme.
+      Reads the OS color-scheme preference synchronously.
+    -->
+    <script>
+      (function () {
+        var d = typeof matchMedia !== 'undefined' && matchMedia('(prefers-color-scheme: dark)').matches
+        var dark = {
+          '--page-bg': '#0a0a0a', '--page-fg': '#e8e8e8', '--page-muted': '#666',
+          '--page-border': '#1c1c1c', '--page-border-strong': '#282828',
+          '--page-surface': '#111', '--page-surface2': '#161616',
+          '--page-code-bg': '#0e0e0e', '--page-title': '#f2f2f2', '--page-input-bg': '#111'
+        }
+        var light = {
+          '--page-bg': '#ffffff', '--page-fg': '#111111', '--page-muted': '#888',
+          '--page-border': '#e4e4e4', '--page-border-strong': '#d0d0d0',
+          '--page-surface': '#f5f5f5', '--page-surface2': '#efefef',
+          '--page-code-bg': '#f7f7f7', '--page-title': '#0a0a0a', '--page-input-bg': '#fafafa'
+        }
+        var vars = d ? dark : light
+        var r = document.documentElement
+        for (var k in vars) r.style.setProperty(k, vars[k])
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

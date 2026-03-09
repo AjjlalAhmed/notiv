@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+docs/node_modules/
+
+# Build output — lib dist is committed for npm publish verification
+# but docs dist is generated on deploy
+docs/dist/
+docs/.vite-ssg-temp/
+
+# Vite temp (can get permission-locked, safer to ignore)
+node_modules/.vite-temp/
+
+# TypeScript
+*.tsbuildinfo
+
+# Env
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# npm
+*.log
+npm-debug.log*
+.npm/

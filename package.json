@@ -1,0 +1,51 @@
+{
+  "name": "notiv",
+  "version": "0.1.0",
+  "description": "Physics-based toast notification library for Vue 3 and Nuxt 3",
+  "type": "module",
+  "main": "./dist/notiv.umd.cjs",
+  "module": "./dist/notiv.js",
+  "types": "./dist/notiv.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/notiv.d.ts",
+      "import": "./dist/notiv.js",
+      "require": "./dist/notiv.umd.cjs"
+    },
+    "./style.css": "./dist/style.css",
+    "./nuxt": {
+      "import": "./dist/module.mjs",
+      "types": "./dist/module.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "vue-tsc --noEmit",
+    "docs:dev": "cd docs && npm run dev",
+    "docs:build": "cd docs && npm run build",
+    "docs:preview": "cd docs && npm run preview",
+    "release": "npm run build && npm publish"
+  },
+  "peerDependencies": {
+    "vue": ">=3.4.0"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "^3.16.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "nuxt": "^3.16.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.1",
+    "vite-plugin-dts": "^4.5.0",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.8"
+  },
+  "author": "ajjlalahmed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajjlalahmed/notiv"
+  },
+  "keywords": ["vue", "nuxt", "toast", "notification", "notiv", "animation"],
+  "license": "MIT"
+}
