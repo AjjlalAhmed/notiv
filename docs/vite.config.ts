@@ -4,6 +4,8 @@ import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [vue()],
+  // GitHub Pages serves under /notiv/ — assets must use this base path
+  base: '/notiv/',
   resolve: {
     // Force all vue imports (including those from notiv src files aliased into
     // this build) to resolve from docs/node_modules — critical for CI where
